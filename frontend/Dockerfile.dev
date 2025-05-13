@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 FROM node:18-alpine
 
 WORKDIR /app
@@ -16,22 +15,3 @@ ENV CHOKIDAR_USEPOLLING=true
 EXPOSE 3000
 
 CMD ["npm", "start"]
-=======
-FROM node:18-alpine
-
-WORKDIR /app
-
-COPY package*.json ./
-
-RUN npm install -g watchpack-chokidar2
-
-RUN npm install
-
-COPY . .
-
-ENV CHOKIDAR_USEPOLLING=true
-
-EXPOSE 3000
-
-CMD ["npm", "start"]
->>>>>>> 6c728f5 (Conflict Resolve)

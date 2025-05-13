@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 Django>=4.2
 djangorestframework
 scikit-learn
 numpy
-=======
-Django>=4.2
-djangorestframework
-scikit-learn
-numpy
->>>>>>> 6c728f5 (Conflict Resolve)
