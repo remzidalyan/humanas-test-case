@@ -2,19 +2,15 @@ services:
   frontend:
     build:
       context: ./frontend
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile
     ports:
       - "80:3000"
     volumes:
       - ./frontend:/app
-      - /app/node_modules
     depends_on:
       - backend
     networks:
       - humanas-test-case
-    environment:
-      - CHOKIDAR_USEPOLLING=true  # Hot reload için gerekli
-    command: npm start
   
   mlapi:
     build:
