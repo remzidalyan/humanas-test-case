@@ -69,7 +69,7 @@ class ActivityCTRL extends Controller
     private function linearRegression($user): void
     {
         $logins = collect($user->logins)->map(fn($date) => Carbon::parse($date))->sort();
-        $LRResponse = Http::post(env('ML_API_URL') . '/api/linear-regression/predict', [
+        $LRResponse = Http::post(config('app.ml_api_url') . '/api/linear-regression/predict', [
             'logins' => $logins->map(fn($date) => $date->format('Y-m-d\TH:i:s.u\Z'))->toArray(),
         ]);
 
